@@ -17,7 +17,7 @@ public class GreetingController {
     }
 
     @PostMapping
-    public String greeting(@RequestParam(defaultValue = "World") String name, Model model) {
+    public String greeting(@RequestParam(defaultValue = "Alex") String name, Model model) {
         String message = "Hello %s!".formatted(name);
         model.addAttribute("message", message);
         return "greeting";
